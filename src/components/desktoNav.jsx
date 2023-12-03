@@ -3,7 +3,7 @@ import { MdDeliveryDining } from "react-icons/md";
 import { GiArchiveRegister } from "react-icons/gi";
 import { VscSignIn } from "react-icons/vsc";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function DesktoNav() {
   const itemsArray = [
@@ -23,6 +23,7 @@ export default function DesktoNav() {
 
   const navContainerRef = useRef();
   const navigate = useNavigate();
+  const [isFixed, setIsFixed] = useState(false);
   // const [showNav, setShowNav] = useState(false);
 
   const handleNavLinkClick = (link) => {
@@ -30,8 +31,27 @@ export default function DesktoNav() {
     // setShowNav(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const winHeight = window.innerHeight;
+      const scroll = window.scrollY;
+      const scrollOffset = scroll > winHeight * 0.1;
+
+      setIsFixed(scrollOffset);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="desktop-nav flex justify-center items-center shadow w-full" ref={navContainerRef}>
+    <nav
+      className={`desktop-nav flex justify-center items-center shadow w-full ${
+        isFixed ? "fixed-nav" : ""
+      }`}
+      ref={navContainerRef}
+    >
       <ul className="list-items flex items-center justify-center py-2 px-2 w-full">
         {itemsArray.map((item, index) => (
           <NavLink
