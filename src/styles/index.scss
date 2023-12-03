@@ -25,6 +25,11 @@
 
 .homepage {
   .homepage-contents {
+    .section-2 {
+      .items-container {
+        background: url("../assets/images/docks2.jpg") center/cover no-repeat;
+      }
+    }
     header {
       position: relative;
       height: 100vh;
