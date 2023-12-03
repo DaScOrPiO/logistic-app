@@ -35,7 +35,7 @@ export default function DesktoNav() {
     const handleScroll = () => {
       const winHeight = window.innerHeight;
       const scroll = window.scrollY;
-      const scrollOffset = scroll > winHeight * 0.1;
+      const scrollOffset = scroll > winHeight * 0.2;
 
       setIsFixed(scrollOffset);
     };
