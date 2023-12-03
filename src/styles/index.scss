@@ -1,1 +1,94 @@
 @import url("./root.scss");
+
+.navigation-container {
+    .mobile-nav, .desktop-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.4); /* Adjust the alpha (fourth parameter) for transparency */
+      backdrop-filter: blur(10px); /* Adjust the blur value based on your preference */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      z-index: 1000;
+    }
+  }
+  
+
+.homepage {
+  .homepage-contents {
+    header {
+      position: relative;
+      height: 100vh;
+      background: url("../assets/images/hero-1.jpg") no-repeat center/cover;
+      .card-section-1 {
+        position: absolute;
+        bottom: -18%;
+        .inner-content {
+          .item-1,
+          .item2 {
+            margin-bottom: 1%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .homepage {
+    .homepage-contents {
+      header {
+        .hero-image {
+          .text-container {
+            h2 {
+              font-size: 2rem;
+            }
+            p {
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .card-section-1 {
+          bottom: -30%;
+          .inner-content {
+            flex-wrap: wrap;
+            .item-1,
+            .item-2 {
+              margin-bottom: 3%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .homepage {
+    .homepage-contents {
+      header {
+        .hero-image {
+          .text-container {
+            h2 {
+              font-size: 1.5rem;
+            }
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+        .card-section-1 {
+          bottom: -65%;
+          .inner-content {
+            flex-wrap: wrap;
+            .item-1,
+            .item-2 {
+              margin-bottom: 3%;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
