@@ -6,6 +6,7 @@ import NotFound from "./pages/notFound";
 import Navigation from "./components/navigation";
 import DeliverItem from "./pages/deliverItem";
 import BookDelivery from "./pages/bookDelivery";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/book_delivery" element={<BookDelivery />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
