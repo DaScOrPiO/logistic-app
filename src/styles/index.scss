@@ -1,1 +1,145 @@
 @import url("./root.scss");
+
+.navigation-container {
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+  }
+  .desktop-nav {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+  }
+  .fixed-nav {
+    position: fixed;
+  }
+}
+
+.homepage {
+  .homepage-contents {
+    .section-2 {
+      .items-container {
+        background: url("../assets/images/docks2.jpg") center/cover no-repeat;
+      }
+    }
+    header {
+      position: relative;
+      height: 100vh;
+      background: url("../assets/images/hero-1.jpg") no-repeat center/cover;
+      .card-section-1 {
+        position: absolute;
+        bottom: -18%;
+        .inner-content {
+          .item-1,
+          .item2 {
+            margin-bottom: 1%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .homepage {
+    .homepage-contents {
+      .section-1 {
+        margin-top: 25%;
+        div {
+          .image-container {
+            .image {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .homepage {
+    .homepage-contents {
+      .section-1 {
+        margin-top: 80%;
+        div {
+          .image-container {
+            .image {
+              width: 100%;
+            }
+          }
+        }
+      }
+      header {
+        .hero-image {
+          .text-container {
+            h2 {
+              font-size: 2rem;
+            }
+            p {
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .card-section-1 {
+          bottom: -30%;
+          .inner-content {
+            flex-wrap: wrap;
+            .item-1,
+            .item-2 {
+              margin-bottom: 3%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .homepage {
+    .homepage-contents {
+      .section-1 {
+        margin-top: 150%;
+        div {
+          .image-container {
+            .image {
+              width: 100%;
+            }
+          }
+        }
+      }
+      header {
+        .hero-image {
+          .text-container {
+            h2 {
+              font-size: 1.5rem;
+            }
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+        .card-section-1 {
+          bottom: -65%;
+          .inner-content {
+            flex-wrap: wrap;
+            .item-1,
+            .item-2 {
+              margin-bottom: 3%;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
