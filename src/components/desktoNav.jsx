@@ -18,7 +18,7 @@ export default function DesktoNav() {
       text: "Deliver Item(s)",
       link: "/deliver_product",
     },
-    { icon: <VscSignIn size="30px" />, text: "Sign/login", link: "/login" },
+    { icon: <VscSignIn size="30px" />, text: "Login", link: "/login" },
   ];
 
   const navContainerRef = useRef();
