@@ -18,7 +18,7 @@ export default function MobileNav() {
       text: "Deliver Item(s)",
       link: "/deliver_product",
     },
-    { icon: <VscSignIn />, text: "Sign/login", link: "/login" },
+    { icon: <VscSignIn />, text: "Login", link: "/login" },
   ];
 
   const [showNav, setShowNav] = useState(false);
